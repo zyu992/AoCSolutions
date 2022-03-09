@@ -17,6 +17,7 @@ dependencies {
     testImplementation("io.kotest:kotest-runner-junit5:5.1.0")
     testImplementation("io.kotest:kotest-assertions-core:5.1.0")
     testImplementation("io.kotest:kotest-property:5.1.0")
+    implementation("io.arrow-kt:arrow-core:1.0.1")
 }
 
 tasks.test {

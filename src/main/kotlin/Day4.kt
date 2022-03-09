@@ -26,12 +26,11 @@ fun day4(rows: List<String>): Int {
         for ((k, i, j) in dict[n] ?: emptyList()) {
             vis[k][i][j] = true
             if (vis[k][i].all { it } || vis[k].map { it[j] }.all { it }) {
-                val res = boards[k].foldIndexed(0) { x, acc1, row ->
+                return n * boards[k].foldIndexed(0) { x, acc1, row ->
                     row.foldIndexed(acc1) { y, acc2, m ->
                         if (!vis[k][x][y]) acc2 + m else acc2
                     }
-                } * n
-                return res
+                }
             }
         }
     }
